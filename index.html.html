@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simpang Raya Trans - Ekspedisi Jepara</title>
+    <meta name="description" content="Jasa angkutan barang terpercaya dari Jepara.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a', /* Biru Gelap */
+                        accent: '#f59e0b',  /* Oranye */
+                        accentHover: '#d97706',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .text-shadow { text-shadow: 2px 2px 4px rgba(0,0,0,0.6); }
+        
+        /* [EDIT DISINI] Gambar Background Utama */
+        .hero-bg {
+            /* Tulis folder/namafile */
+            background-image: url('images/cover.jpg'); 
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Animasi Transisi Galeri */
+        #extra-gallery {
+            transition: all 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-primary/90 md:bg-transparent">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-xl md:text-2xl font-heading font-bold text-white tracking-tight z-50 relative">
+                SIMPANG RAYA <span class="text-accent">TRANS</span>
+            </a>
+            
+            <button id="mobile-menu-btn" class="md:hidden text-white text-2xl z-50 relative focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+                <a href="#layanan" class="hover:text-accent transition">Layanan</a>
+                <a href="#armada" class="hover:text-accent transition">Armada</a>
+                <a href="#area" class="hover:text-accent transition">Jangkauan</a>
+            </div>
+
+            <a href="https://wa.me/6282331025610" 
+               class="hidden md:flex bg-accent hover:bg-accentHover text-white px-5 py-2 rounded-full font-bold text-sm transition shadow-lg items-center gap-2">
+                <i class="fab fa-whatsapp text-lg"></i> Hubungi Kami
+            </a>
+        </div>
+
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-primary flex flex-col items-center justify-center space-y-8 md:hidden transition-all duration-300 z-40">
+            <a href="#layanan" class="text-2xl text-white font-heading mobile-link">Layanan</a>
+            <a href="#armada" class="text-2xl text-white font-heading mobile-link">Armada</a>
+            <a href="#area" class="text-2xl text-white font-heading mobile-link">Jangkauan</a>
+            <a href="https://wa.me/6282331025610" class="text-xl text-accent font-bold mobile-link">
+                <i class="fab fa-whatsapp"></i> Chat WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <section class="relative h-screen flex items-center justify-center hero-bg">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/80 to-primary/30"></div>
+        <div class="relative z-10 container mx-auto px-6 text-center mt-10" data-aos="fade-up">
+            <span class="inline-block py-1 px-3 rounded-full bg-accent/20 border border-accent/50 text-accent text-[10px] md:text-xs font-bold tracking-wider mb-4">
+                🚀 EKSPEDISI TERPERCAYA DARI JEPARA
+            </span>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-extrabold text-white mb-4 leading-tight text-shadow">
+                Kirim Barang <br> <span class="text-accent">Aman & Cepat.</span>
+            </h1>
+            <p class="text-slate-300 text-base md:text-xl max-w-2xl mx-auto mb-8 font-light">
+                Spesialis angkutan barang dari Jepara ke Jakarta, Jawa barat, Jawa tengah.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-3">
+                <a href="https://wa.me/6282331025610?text=Halo,%20saya%20mau%20tanya%20jasa%20kirim%20barang!" 
+                   class="bg-accent hover:bg-accentHover text-white px-8 py-3 rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2">
+                   <i class="fas fa-paper-plane"></i> Chat WhatsApp
+                </a>
+                <a href="#armada" class="bg-white/10 backdrop-blur border border-white/20 text-white px-8 py-3 rounded-xl font-bold text-lg flex items-center justify-center">
+                    Lihat Armada
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="layanan" class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-10" data-aos="fade-up">
+                <h2 class="text-2xl md:text-4xl font-heading font-bold text-primary">Kenapa Memilih Kami?</h2>
+                <div class="w-16 h-1 bg-accent mx-auto mt-2 rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm hover:border-accent hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-xl mb-4"><i class="fas fa-truck-fast"></i></div>
+                    <h3 class="text-lg font-bold text-primary mb-2">Armada Terawat</h3>
+                    <p class="text-sm text-slate-500">Kendaraan selalu dicek berkala agar barang sampai tanpa kendala.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm hover:border-accent hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center text-xl mb-4"><i class="fas fa-tags"></i></div>
+                    <h3 class="text-lg font-bold text-primary mb-2">Harga Transparan</h3>
+                    <p class="text-sm text-slate-500">Harga deal di awal. Tidak ada biaya siluman.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm hover:border-accent hover:shadow-md transition" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center text-xl mb-4"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="text-lg font-bold text-primary mb-2">Supir Berpengalaman</h3>
+                    <p class="text-sm text-slate-500">Ahli rute Jawa & Bali, serta penataan barang mebel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="area" class="py-16 bg-slate-900 text-white">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row gap-10 items-center">
+            <div class="md:w-1/2" data-aos="fade-right">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">Rute <span class="text-accent">Jawa & Bali</span></h2>
+                <ul class="space-y-3 text-sm md:text-base">
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-accent"></i> Jabodetabe (jakarta,bogor,depok,tangerang,bekasi) (Rutin)</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-accent"></i> Jawa Barat (Bandung, dll)</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-accent"></i> Jawa Tengah & DIY</li>
+
+                </ul>
+            </div>
+            <div class="md:w-1/2 grid grid-cols-2 gap-3" data-aos="fade-left">
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700"><h4 class="font-bold text-lg">Jakarta</h4><p class="text-xs text-slate-400">Tujuan Utama</p></div>
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700"><h4 class="font-bold text-lg">Yogyakarta</h4><p class="text-xs text-slate-400">Via Tol</p></div>
+                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700"><h4 class="font-bold text-lg">Bandung</h4><p class="text-xs text-slate-400">Jalur Selatan</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="armada" class="py-16 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-2xl md:text-3xl font-heading font-bold text-center text-primary mb-2" data-aos="fade-up">Galeri Armada</h2>
+            <p class="text-center text-slate-500 mb-10" data-aos="fade-up">Klik gambar untuk memperbesar.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[600px] mb-4">
+                
+                <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl shadow-lg cursor-pointer h-64 md:h-auto" onclick="openLightbox(this)">
+                    <img src="images/truck (1).jpg" onerror="this.src='https://placehold.co/800x800/1e293b/FFF?text=Foto+Truk+1'" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"><i class="fas fa-search-plus text-white text-3xl"></i></div>
+                </div>
+
+                <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer h-48 md:h-auto" onclick="openLightbox(this)">
+                    <img src="images/truck (2).jpg" onerror="this.src='https://placehold.co/400x400/1e293b/FFF?text=Foto+Truk+2'" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                </div>
+
+                <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer h-48 md:h-auto" onclick="openLightbox(this)">
+                   <img src="images/truck (3).jpg" onerror="this.src='https://placehold.co/400x400/1e293b/FFF?text=Foto+Truk+3'" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                </div>
+
+                <div class="md:col-span-2 relative group overflow-hidden rounded-xl shadow-lg cursor-pointer h-48 md:h-auto" onclick="openLightbox(this)">
+                    <img src="images/truck (4).jpg" onerror="this.src='https://placehold.co/800x400/1e293b/FFF?text=Foto+Truk+4'" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                </div>
+            </div>
+
+            <div id="extra-gallery" class="hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 transition-all duration-500">
+                
+                <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer h-64" onclick="openLightbox(this)">
+                    <img src="images/truck (5).jpg" onerror="this.src='https://placehold.co/600x400/1e293b/FFF?text=Foto+Truk+5'" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer h-64" onclick="openLightbox(this)">
+                    <img src="images/truck (6).jpg" onerror="this.src='https://placehold.co/600x400/1e293b/FFF?text=Foto+Truk+6'" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer h-64" onclick="openLightbox(this)">
+                    <img src="images/truck (7).jpg" onerror="this.src='https://placehold.co/600x400/1e293b/FFF?text=Foto+Truk+7'" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer h-64" onclick="openLightbox(this)">
+                    <img src="images/truck (8).jpg" onerror="this.src='https://placehold.co/600x400/1e293b/FFF?text=Foto+Truk+8'" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer h-64" onclick="openLightbox(this)">
+                    <img src="images/truck (9).jpg" onerror="this.src='https://placehold.co/600x400/1e293b/FFF?text=Foto+Truk+9'" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer h-64" onclick="openLightbox(this)">
+                    <img src="images/truck (10).jpg" onerror="this.src='https://placehold.co/600x400/1e293b/FFF?text=Foto+Truk+10'" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer h-64" onclick="openLightbox(this)">
+                    <img src="images/truck (11).jpg" onerror="this.src='https://placehold.co/600x400/1e293b/FFF?text=Foto+Truk+11'" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer h-64" onclick="openLightbox(this)">
+                    <img src="images/truck (12).jpg" onerror="this.src='https://placehold.co/600x400/1e293b/FFF?text=Foto+Truk+12'" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer h-64" onclick="openLightbox(this)">
+                    <img src="images/truck (13).jpg" onerror="this.src='https://placehold.co/600x400/1e293b/FFF?text=Foto+Truk+13'" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <button id="loadMoreBtn" onclick="toggleGallery()" class="bg-white border border-slate-300 text-primary hover:bg-slate-50 hover:text-accent font-bold py-3 px-8 rounded-full transition shadow-md">
+                    <i class="fas fa-camera"></i> Lihat Semua Foto
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800 text-sm">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <div><h3 class="text-white text-xl font-heading font-bold mb-3">SIMPANG RAYA TRANS</h3><p>Partner logistik terpercaya.</p></div>
+            <div><h4 class="text-white font-bold mb-3 uppercase">Kontak</h4><p class="mb-1">Jepara, Jawa Tengah</p><p class="text-accent font-bold">+62 823-3102-5610</p></div>
+            <div><h4 class="text-white font-bold mb-3 uppercase">Menu</h4><div class="flex flex-col gap-2"><a href="#layanan" class="hover:text-white">Layanan</a><a href="#armada" class="hover:text-white">Galeri</a></div></div>
+        </div>
+        <div class="text-center mt-8 pt-6 border-t border-slate-800 text-xs">&copy; 2026 Simpang Raya Trans.</div>
+    </footer>
+
+    <div id="lightbox" class="fixed inset-0 z-[9999] bg-black/95 hidden flex justify-center items-center p-4 transition-opacity duration-300 opacity-0" onclick="closeLightbox()">
+        <button class="absolute top-5 right-5 text-white text-4xl hover:text-accent focus:outline-none">&times;</button>
+        <img id="lightbox-img" src="" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl scale-90 transition-transform duration-300">
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Init Animasi
+        AOS.init({ duration: 800, once: true });
+
+        // Menu HP
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const links = document.querySelectorAll('.mobile-link'); 
+        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+        links.forEach(link => { link.addEventListener('click', () => { menu.classList.add('hidden'); }); });
+
+        // Navbar Scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('glass-nav'); navbar.classList.remove('bg-primary/90');
+            } else {
+                navbar.classList.remove('glass-nav'); navbar.classList.add('bg-primary/90');
+            }
+        });
+
+        // Load More Gallery
+        function toggleGallery() {
+            const extraGallery = document.getElementById('extra-gallery');
+            const btn = document.getElementById('loadMoreBtn');
+            if (extraGallery.classList.contains('hidden')) {
+                extraGallery.classList.remove('hidden');
+                btn.innerHTML = '<i class="fas fa-chevron-up"></i> Sembunyikan Foto';
+            } else {
+                extraGallery.classList.add('hidden');
+                btn.innerHTML = '<i class="fas fa-camera"></i> Lihat Semua Foto';
+                document.getElementById('armada').scrollIntoView({behavior: 'smooth'});
+            }
+        }
+
+        // Lightbox Logic
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            lightboxImg.src = img.src;
+            lightbox.classList.remove('hidden');
+            setTimeout(() => { lightbox.classList.remove('opacity-0'); lightboxImg.classList.remove('scale-90'); lightboxImg.classList.add('scale-100'); }, 10);
+        }
+        function closeLightbox() {
+            lightbox.classList.add('opacity-0'); lightboxImg.classList.remove('scale-100'); lightboxImg.classList.add('scale-90');
+            setTimeout(() => { lightbox.classList.add('hidden'); }, 300);
+        }
+    </script>
+</body>
+</html>
